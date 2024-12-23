@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Telegram Cloud</title>
+</head>
+<body>
+    <h1>Telegram Cloud Storage</h1>
+
+    <h2>Upload File</h2>
+    <form method="POST" enctype="multipart/form-data">
+        {{ upload_form.hidden_tag() }}
+        {{ upload_form.file.label }} {{ upload_form.file }}
+        {{ upload_form.submit }}
+    </form>
+
+    <h2>Search Files</h2>
+    <form method="POST">
+        {{ search_form.hidden_tag() }}
+        {{ search_form.query.label }} {{ search_form.query }}
+        {{ search_form.submit }}
+    </form>
+
+    {% if files %}
+    <h3>Search Results:</h3>
+    <ul>
+        {% for file in files %}
+        <li>{{ file }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</body>
+</html>
