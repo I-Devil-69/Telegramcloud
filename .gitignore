@@ -1,0 +1,30 @@
+# Python-specific files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pydistutils.cfg
+env/
+venv/
+
+# Environment variables
+.env
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor and IDE settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs and temporary files
+*.log
+*.bak
+uploads/
+downloads/
+
+# Heroku-specific
+*.sqlite3
